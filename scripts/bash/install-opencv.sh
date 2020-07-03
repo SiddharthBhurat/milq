@@ -6,7 +6,7 @@
 #                       SCRIPT OPTIONS                                 |
 # ---------------------------------------------------------------------|
 OPENCV_VERSION='4.2.0'       # Version to be installed
-OPENCV_CONTRIB='NO'          # Install OpenCV's extra modules (YES/NO)
+OPENCV_CONTRIB='YES'          # Install OpenCV's extra modules (YES/NO)
 # -------------------------------------------------------------------- |
 
 # |          THIS SCRIPT IS TESTED CORRECTLY ON          |
@@ -92,7 +92,7 @@ cmake -DWITH_QT=ON -DWITH_OPENGL=ON -DFORCE_VTK=ON -DWITH_TBB=ON -DWITH_GDAL=ON 
       -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules ..
 fi
 
-make -j8
+make -j4
 sudo make install
 sudo ldconfig
 
